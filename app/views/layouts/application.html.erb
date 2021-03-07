@@ -11,18 +11,18 @@
   <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-light bg-light">
-      <div class="navbar-brand mb-0 h1">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1"></span>
         <%= link_to "Autocon", root_path, class: "navbar-brand" %>
         <ul class="nav nav-pills">
-          <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
+          <li class="nav-item pull-md-left"><%= link_to "Home", root_path, class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "About", about_path, class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "Contact", contact_path, class: "nav-link" %></li>
           <% if user_signed_in? %>
-            <li class="nav-item"><%= button_to "Sair", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
+            <li class="nav-item"><%= button_to "Sair", signout_path, method: :delete, class: "btn btn-primary" %></li>
             <% else %>
-             <li class="nav-item"><%= link_to "Cadastrar", new_user_registration_path, class: "nav-link" %></li>
-             <li class="nav-item"><%= link_to "Entrar", new_user_session_path, class: "nav-link" %></li>
+             <li class="nav-item"><%= link_to "Cadastrar", signup_path, class: "btn btn-outline-primary" %></li>
+             <li class="nav-item pull-md-right"><%= link_to "Entrar", signin_path, class: "btn btn-primary" %></li>
             <% end %>
         </ul>
       </div>
