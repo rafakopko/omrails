@@ -11,16 +11,21 @@
   <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse">
-      <div class="container">
-        <%= link_to "One Month Rails", root_path, class: "navbar-brand" %>
-        <ul class="navbar-nav">
+    <nav class="navbar navbar-light bg-light">
+      <div class="navbar-brand mb-0 h1">
+        <%= link_to "Autocon", root_path, class: "navbar-brand" %>
+        <ul class="nav nav-pills">
           <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "About", about_path, class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "Contact", contact_path, class: "nav-link" %></li>
+           <li class="nav-item"><%= link_to "Contact", contact_path, class: "nav-link" %></li>
         </ul>
       </div>
     </nav>
+
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
     <!-- Page Content -->
     <%= yield %>
