@@ -27,10 +27,16 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap', '~> 5.0.0.beta2'
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails', '~> 5.0.5'
 
 gem 'turbolinks', '~> 5.2.0'
 
 gem 'devise'
+
+gem 'activeadmin'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

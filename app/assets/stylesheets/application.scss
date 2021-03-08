@@ -1,6 +1,11 @@
 // Custom bootstrap variables must be set or imported before bootstrap itself.
+
+@import "bootstrap_custom";
 @import "bootstrap";
+@import "pages";
+
 
 body {
     padding-top: 5rem;
 }
+@import "signin_and_signup"
